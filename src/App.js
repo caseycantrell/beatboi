@@ -136,20 +136,22 @@ const KeyboardKey = ({ play, sound: { id, key, url, keyCode } }) => {
     document.addEventListener("keydown", handleKeyDown);
   }, []);
 
-  return <button className='drum-pad' onClick={() => play(key, id)}>
+  return <button id={keyCode} className='drum-pad' onClick={() => play(key, id)}>
       <audio className='clip' id={key} src={url} />
         {key} 
     </button>
 };
 
-const Keyboard = ({ play, sounds }) => (
+const Keyboard = ({ power, play, sounds }) => (
   <div className='keyboard'>
-    {sounds.map((sound) => <KeyboardKey play={play} sound={sound} />)}
+    {power ? sounds.map((sound) => <KeyboardKey play={play} sound={sound} />) : sounds.map((sound) => <KeyboardKey play={play} sound={{...sound, url: "#"}} />)}
   </div>
 );
 
-const DrumControl = ({ name, volume, switchBank, handleVolumeChange }) => (
+const DrumControl = ({ name, stop, power, volume, switchBank, handleVolumeChange }) => (
   <div className='control'>
+    <button onClick={stop}>Power: {power ? "ON" : "OFF"}</button>
+    <h2>Volume: {Math.round(volume * 100)}%</h2>
      <input
       max="1"
       min="0"
@@ -164,21 +166,41 @@ const DrumControl = ({ name, volume, switchBank, handleVolumeChange }) => (
 );
 
 function App() {
+  const [power, setPower] = useState(true)
   const [volume, setVolume] = useState(1);
   const [soundType, setSoundType] = useState("heaterKit");
   const [sounds, setSounds] = useState(soundsGroup[soundType]);
   const [soundName, setSoundName] = useState("");
 
+  const stop = () => {
+    setPower(!power);
+  };
+
   const handleVolumeChange = (e) => {
     setVolume(e.target.value);
   };
 
+  const styleActiveKey = (audio) => {
+    audio.parentElement.style.backgroundColor = "#000000"
+    audio.parentElement.style.color = "#ffffff"
+  };
+
+  const deactivateAudio = (audio) => {
+    setTimeout(() => {
+      audio.parentElement.style.backgroundColor = "#ffffff"
+      audio.parentElement.style.color = "#000000"
+    }, 300)
+  };
+ 
+
   const play = (key, sound) => {
     setSoundName(sound);
     const audio = document.getElementById(key);
+    styleActiveKey(audio);
     audio.currentTime = 0;
     audio.play();
-  }
+    deactivateAudio(audio);
+  };
 
   const switchBank = () => {
     setSoundName("");
@@ -204,8 +226,8 @@ function App() {
     <div id="drum-machine">
       {setKeyVolume()}
       <div className='wrapper'>
-        <Keyboard play={play} sounds={sounds} />
-        <DrumControl volume={volume} handleVolumeChange={handleVolumeChange} name={soundName || soundsName[soundType]} switchBank={switchBank} />
+        <Keyboard power={power} play={play} sounds={sounds} />
+        <DrumControl stop={stop} power={power} volume={volume} handleVolumeChange={handleVolumeChange} name={soundName || soundsName[soundType]} switchBank={switchBank} />
         </div>
     </div>
   )
