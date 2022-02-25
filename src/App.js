@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 const firstSoundsGroup = [
   {
@@ -114,13 +114,26 @@ const secondSoundsGroup = [
   }
 ];
 
-const Keyboard = ({ play }) => {
-  return firstSoundsGroup.map(({ key, url }) => {
-    return <button className='drum-pad' onClick={() => play(key)}>
+const KeyboardKey = ({ play, sound: { key, url, keyCode } }) => {
+
+  const handleKeyDown = (e) => {
+    if (e.keyCode === keyCode) {
+      play(key);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("keydown", handleKeyDown);
+  }, []);
+
+  return <button className='drum-pad' onClick={() => play(key)}>
       <audio className='clip' id={key} src={url} />
         {key} 
     </button>
-  })
+};
+
+const Keyboard = ({ play }) => {
+  return firstSoundsGroup.map((sound) => <KeyboardKey play={play} sound={sound} />)
 };
 
 function App() {
