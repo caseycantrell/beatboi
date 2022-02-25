@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const firstSoundsGroup = [
   {
@@ -114,6 +114,16 @@ const secondSoundsGroup = [
   }
 ];
 
+const soundsName = {
+  heaterKit: "Heater Kit",
+  smoothPianoKit: "Smooth Piano Kit"
+};
+
+const soundsGroup = {
+  heaterKit: firstSoundsGroup,
+  smoothPianoKit: secondSoundsGroup
+};
+
 const KeyboardKey = ({ play, sound: { key, url, keyCode } }) => {
 
   const handleKeyDown = (e) => {
@@ -132,11 +142,20 @@ const KeyboardKey = ({ play, sound: { key, url, keyCode } }) => {
     </button>
 };
 
-const Keyboard = ({ play }) => {
-  return firstSoundsGroup.map((sound) => <KeyboardKey play={play} sound={sound} />)
+const Keyboard = ({ play, sounds }) => {
+  return sounds.map((sound) => <KeyboardKey play={play} sound={sound} />)
 };
 
+const DrumControl = ({ switchBank }) => (
+  <div className='control'>
+    <button onClick={switchBank}>Switch Bank</button>
+  </div>
+);
+
 function App() {
+
+  const [soundType, setSoundType] = useState("heaterKit");
+  const [sounds, setSounds] = useState(soundsGroup[soundType]);
 
   const play = (key) => {
     const audio = document.getElementById(key);
@@ -144,9 +163,20 @@ function App() {
     audio.play();
   }
 
+  const switchBank = () => {
+    if (soundType === "heaterKit") {
+      setSoundType("smoothPianoKit");
+      setSounds(soundsGroup.smoothPianoKit);
+    } else {
+      setSoundType("heaterKit");
+      setSounds(soundsGroup.heaterKit);
+    }
+  };
+
   return (
     <div id="drum-machine">
-        <Keyboard play={play} />
+        <Keyboard play={play} sounds={sounds} />
+        <DrumControl switchBank={switchBank} />
     </div>
   )
 };
