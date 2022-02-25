@@ -114,19 +114,26 @@ const secondSoundsGroup = [
   }
 ];
 
-const Keyboard = () => {
-  return firstSoundsGroup.map(sound => {
-    return <button>
-      <audio src={sound.url} />
-        {sound.key} 
+const Keyboard = ({ play }) => {
+  return firstSoundsGroup.map(({ key, url }) => {
+    return <button className='drum-pad' onClick={() => play(key)}>
+      <audio className='clip' id={key} src={url} />
+        {key} 
     </button>
   })
-}
+};
 
 function App() {
+
+  const play = (key) => {
+    const audio = document.getElementById(key);
+    audio.currentTime = 0;
+    audio.play();
+  }
+
   return (
     <div id="drum-machine">
-        <Keyboard />
+        <Keyboard play={play} />
     </div>
   )
 };
