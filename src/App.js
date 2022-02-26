@@ -153,6 +153,48 @@ const secondSoundsGroup = [
     key: 'C',
     id: 'Snare',
     url: 'https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3'
+  },
+  {
+    keyCode: 67,
+    key: 'C',
+    id: 'Snare',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3'
+  },
+  {
+    keyCode: 67,
+    key: 'C',
+    id: 'Snare',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3'
+  },
+  {
+    keyCode: 67,
+    key: 'C',
+    id: 'Snare',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3'
+  },
+  {
+    keyCode: 67,
+    key: 'C',
+    id: 'Snare',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3'
+  },
+  {
+    keyCode: 67,
+    key: 'C',
+    id: 'Snare',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3'
+  },
+  {
+    keyCode: 67,
+    key: 'C',
+    id: 'Snare',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3'
+  },
+  {
+    keyCode: 67,
+    key: 'C',
+    id: 'Snare',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3'
   }
 ];
 
