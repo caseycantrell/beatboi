@@ -54,6 +54,48 @@ const firstSoundsGroup = [
     key: 'C',
     id: 'Closed-HH',
     url: 'https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3'
+  },
+  {
+    keyCode: 67,
+    key: 'C',
+    id: 'Closed-HH',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3'
+  },
+  {
+    keyCode: 67,
+    key: 'C',
+    id: 'Closed-HH',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3'
+  },
+  {
+    keyCode: 67,
+    key: 'C',
+    id: 'Closed-HH',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3'
+  },
+  {
+    keyCode: 67,
+    key: 'C',
+    id: 'Closed-HH',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3'
+  },
+  {
+    keyCode: 67,
+    key: 'C',
+    id: 'Closed-HH',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3'
+  },
+  {
+    keyCode: 67,
+    key: 'C',
+    id: 'Closed-HH',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3'
+  },
+  {
+    keyCode: 67,
+    key: 'C',
+    id: 'Closed-HH',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3'
   }
 ];
 
@@ -148,9 +190,14 @@ const Keyboard = ({ power, play, sounds }) => (
   </div>
 );
 
-const DrumControl = ({ name, stop, power, volume, switchBank, handleVolumeChange }) => (
+const Screen = ({ name }) => (
   <div className='control'>
-    <button onClick={stop}>Power: {power ? "ON" : "OFF"}</button>
+    <h2 id='display'>{name}</h2>
+  </div>
+);
+ 
+const Volume = ({ volume, handleVolumeChange }) => (
+  <div className='volume'>
     <h2>Volume: {Math.round(volume * 100)}%</h2>
      <input
       max="1"
@@ -160,8 +207,18 @@ const DrumControl = ({ name, stop, power, volume, switchBank, handleVolumeChange
       value={volume}
       onChange={handleVolumeChange}
       />
-    <h2 id='display'>{name}</h2>
+  </div>
+);
+
+const SwitchBank = ({ switchBank }) => (
+  <div>
     <button onClick={switchBank}>Switch Bank</button>
+  </div>
+);
+
+const Power = ({ stop, power }) => (
+  <div className='power'>
+    <button onClick={stop}>Power: {power ? "ON" : "OFF"}</button>
   </div>
 );
 
@@ -227,8 +284,13 @@ function App() {
       {setKeyVolume()}
       <div className='wrapper'>
         <Keyboard power={power} play={play} sounds={sounds} />
-        <DrumControl stop={stop} power={power} volume={volume} handleVolumeChange={handleVolumeChange} name={soundName || soundsName[soundType]} switchBank={switchBank} />
+        <div className='right-side'>
+          <Power stop={stop} power={power} />
+          <Screen stop={stop} name={soundName || soundsName[soundType]} switchBank={switchBank} />
+          <SwitchBank switchBank={switchBank} />
+          <Volume volume={volume} handleVolumeChange={handleVolumeChange} />
         </div>
+      </div>
     </div>
   )
 };
