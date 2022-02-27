@@ -226,7 +226,7 @@ const KeyboardKey = ({ play, sound: { id, key, url, keyCode } }) => {
     </button>
 };
 
-const Keyboard = ({ power, play, sounds }) => (
+const Keyboard = ({ id, power, play, sounds }) => (
   <div className='keyboard'>
     {power ? sounds.map((sound) => <KeyboardKey play={play} sound={sound} />) : sounds.map((sound) => <KeyboardKey play={play} sound={{...sound, url: "#"}} />)}
   </div>
@@ -249,6 +249,7 @@ const Volume = ({ volume, handleVolumeChange }) => (
       type="range"
       value={volume}
       onChange={handleVolumeChange}
+      orient="vertical"
       />
   </div>
 );
