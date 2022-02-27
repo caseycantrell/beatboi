@@ -232,15 +232,16 @@ const Keyboard = ({ power, play, sounds }) => (
   </div>
 );
 
-const Screen = ({ name }) => (
+const Screen = ({ name, volume }) => (
   <div className='screen'>
-    <h2 id='display'>{name}</h2>
+    <h2 id='sound-display'>{name}</h2>
+    <h2 id='volume-display'>Volume: {Math.round(volume * 100)}%</h2>
   </div>
 );
  
 const Volume = ({ volume, handleVolumeChange }) => (
   <div className='volume'>
-    <h2>Volume: {Math.round(volume * 100)}%</h2>
+    <h4>Volume Control</h4>
      <input
       max="1"
       min="0"
@@ -253,7 +254,7 @@ const Volume = ({ volume, handleVolumeChange }) => (
 );
 
 const SwitchBank = ({ switchBank }) => (
-  <div>
+  <div className='switch-bank'>
     <button onClick={switchBank}>Switch Bank</button>
   </div>
 );
@@ -328,7 +329,7 @@ function App() {
         <Keyboard power={power} play={play} sounds={sounds} />
         <div className='right-side'>
           <Power stop={stop} power={power} />
-          <Screen stop={stop} name={soundName || soundsName[soundType]} switchBank={switchBank} />
+          <Screen stop={stop} volume={volume} name={soundName || soundsName[soundType]} switchBank={switchBank} />
           <SwitchBank switchBank={switchBank} />
           <Volume volume={volume} handleVolumeChange={handleVolumeChange} />
         </div>
