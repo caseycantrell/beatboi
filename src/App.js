@@ -233,7 +233,7 @@ const Keyboard = ({ power, play, sounds }) => (
 );
 
 const Screen = ({ name }) => (
-  <div className='control'>
+  <div className='screen'>
     <h2 id='display'>{name}</h2>
   </div>
 );

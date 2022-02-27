@@ -1,99 +1,80 @@
-*{
+* {
     margin: 0;
-  }
+}
   
-  body {
-    font-size: 24px;
-  }
+body {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 28px
+}
+
+#drum-machine {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
   
-  h2 {
-    font-size: 28px
-  }
-  
-  #drum-machine {
-    margin: 15px;
-    height: 100vh;
+.wrapper {
+    width: 100%;
     display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  .wrapper {
-      width: 100%;
-      display: flex;
-      padding: 10px;
-      margin-top: 40px;
-      border: 1px solid black;
-      border-radius: 4px;
-      grid-template-columns: 1fr;
-      background-color: #c2bea4;
-  }
-  
-  .keyboard {
-      display: grid;
-      grid-gap: 10px;
-      grid-template-columns: repeat(4, 1fr);
-  }
-  
-  .keyboard .drum-pad {
-    width: 100px;
-    height: 100px;
-    outline: none;
-    font-size: 24px;
-    cursor: pointer;
+    padding: 10px;
+    border: 1px solid black;
     border-radius: 4px;
-    background-color: #ffffff;
-    transition: all .3s ease-in-out
-  }
-  
-  @media(min-width: 768px){
-    .wrapper {
-        width: 680px;
-    }
-  }
-  
-  @media(min-width: 992px){
-    .wrapper {
-       grid-template-columns: 1fr 1fr;
-    }
-  }
-  
-  .control {
-    display: flex;
-    height: 200px;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    background-color: #7e9908;
-  }
-  
-  .control > button,
-  .control > input,
-  .control > h2 {
-    margin-bottom: 10px
-  }
-  
-  .control button {
-    border: none;
-    color: #ffffff;
-    cursor: pointer;
-    font-size: 20px;
-    padding: 8px 10px;
-    border-radius: 5px;
-    background-color: #000000;
-  }
+    grid-template-columns: 1fr;
+    background-color: #c2bea4;
+}
 
-  .right-side {
-    background-color: ;
-  }
+.keyboard {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+}
 
-  .power {
-    background-color: red;
+.keyboard .drum-pad {
+  width: 100px;
+  height: 100px;
+  outline: none;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: #ffffff;
+  transition: all .3s ease-in-out;
+}
+
+@media(min-width: 768px){
+  .wrapper {
+      width: 680px;
   }
+}
+
+@media(min-width: 992px){
+  .wrapper {
+      grid-template-columns: 1fr 1fr;
+  }
+}
   
-  .volume {
-    background-color: red;
-  }
+.screen {
+  display: flex;
+  height: 200px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #7e9908;
+}
+
+.right-side {
+  background-color: ;
+}
+
+.power {
+  background-color: red;
+}
+
+.volume {
+  background-color: red;
+}
 
  
