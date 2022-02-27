@@ -241,7 +241,7 @@ const Screen = ({ name, volume }) => (
  
 const Volume = ({ volume, handleVolumeChange }) => (
   <div className='volume'>
-    <h4>Volume Control</h4>
+    
      <input
       max="1"
       min="0"
@@ -251,6 +251,7 @@ const Volume = ({ volume, handleVolumeChange }) => (
       onChange={handleVolumeChange}
       orient="vertical"
       />
+      <h4>Master Volume</h4>
   </div>
 );
 

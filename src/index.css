@@ -97,6 +97,15 @@ h2 {
   padding: 10px;
 }
 
+.switch-bank button {
+  padding: 10px;
+  border: 0px;
+  border-radius: 3px;
+  font-size: 18px;
+  color: white;
+  background-color: #000000;
+}
+
 input[type=range] {
   height: 32px;
   -webkit-appearance: none;
