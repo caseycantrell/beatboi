@@ -9,14 +9,14 @@ const soundsName = {
   tr808Kit: "TR-808 Kit",
   tr909Kit: "TR-909 Kit",
   offTheWallKit: "Off The Wall Kit",
-  fourthKit: "Fourth Kit"
+  buckKit: "Buck Kit"
 };
 
 const soundGroup = {
   tr808Kit: firstSoundGroup,
   tr909Kit: secondSoundGroup,
   offTheWallKit: thirdSoundGroup,
-  fourthKit: fourthSoundGroup
+  buckKit: fourthSoundGroup
 };
 
 const KeyboardKey = ({ play, sound: { id, key, url, keyCode } }) => {
@@ -148,9 +148,9 @@ function App() {
       setSoundType("offTheWallKit");
       setSounds(soundGroup.offTheWallKit);
     } else if (soundType === "offTheWallKit")  {
-      setSoundType("fourthKit");
-      setSounds(soundGroup.fourthKit)
-    } else if (soundType === "fourthKit") {
+      setSoundType("buckKit");
+      setSounds(soundGroup.buckKit)
+    } else if (soundType === "buckKit") {
       setSoundType("tr808Kit")
       setSounds(soundGroup.tr808Kit)
     }
@@ -159,9 +159,9 @@ function App() {
   const switchBankBack = () => {
     setSoundName("");
     if (soundType === "tr808Kit") {
-      setSoundType("fourthKit");
-      setSounds(soundGroup.fourthKit);
-    } else if (soundType === "fourthKit") {
+      setSoundType("buckKit");
+      setSounds(soundGroup.buckKit);
+    } else if (soundType === "buckKit") {
       setSoundType("offTheWallKit");
       setSounds(soundGroup.offTheWallKit);
     } else if (soundType === "offTheWallKit")  {
