@@ -96,6 +96,7 @@ h2 {
   color: white;
   padding-left: 10px;
   padding-right: 10px;
+  cursor: pointer;
 }
 
 #on-off {
@@ -121,6 +122,8 @@ h2 {
 
 .volume {
   text-align: center;
+  font-size: 20px;
+  font-family: Poppins;
 }
 
 .switch-bank {
@@ -134,8 +137,10 @@ h2 {
   border: 0px;
   border-radius: 3px;
   font-size: 18px;
+  font-family: Poppins;
   color: white;
   background-color: #000000;
+  cursor: pointer;
 }
 
 .dummy-buttons1 {
