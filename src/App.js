@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useCallback } from 'react'
 import { BsFillArrowRightSquareFill, BsFillArrowLeftSquareFill } from "react-icons/bs";
 import { firstSoundGroup } from './components/firstSoundGroup';
 import { secondSoundGroup } from './components/secondSoundGroup';
@@ -8,28 +8,30 @@ import { fourthSoundGroup } from './components/fourthSoundGroup';
 const soundsName = {
   tr808Kit: "TR-808 Kit",
   tr909Kit: "TR-909 Kit",
-  thirdKit: "Third Kit",
+  offTheWallKit: "Off The Wall Kit",
   fourthKit: "Fourth Kit"
 };
 
 const soundGroup = {
   tr808Kit: firstSoundGroup,
   tr909Kit: secondSoundGroup,
-  thirdKit: thirdSoundGroup,
+  offTheWallKit: thirdSoundGroup,
   fourthKit: fourthSoundGroup
 };
 
 const KeyboardKey = ({ play, sound: { id, key, url, keyCode } }) => {
 
-  const handleKeyDown = (e) => {
-    if (e.keyCode === keyCode) {
-      play(key, id);
-    }
-  };
+  const handleKeyDown = useCallback(
+    (e) => {
+      if (e.keyCode === keyCode) {
+        play(key, id);
+      }
+    }, [key, play, id, keyCode],
+  );
 
   useEffect(() => {
     document.addEventListener("keydown", handleKeyDown);
-  }, []);
+  }, [handleKeyDown]);
 
   return <button id={keyCode} className='drum-pad' onClick={() => play(key, id)}>
       <audio className='clip' id={key} src={url} />
@@ -143,9 +145,9 @@ function App() {
       setSoundType("tr909Kit");
       setSounds(soundGroup.tr909Kit);
     } else if (soundType === "tr909Kit") {
-      setSoundType("thirdKit");
-      setSounds(soundGroup.thirdKit);
-    } else if (soundType === "thirdKit")  {
+      setSoundType("offTheWallKit");
+      setSounds(soundGroup.offTheWallKit);
+    } else if (soundType === "offTheWallKit")  {
       setSoundType("fourthKit");
       setSounds(soundGroup.fourthKit)
     } else if (soundType === "fourthKit") {
@@ -160,9 +162,9 @@ function App() {
       setSoundType("fourthKit");
       setSounds(soundGroup.fourthKit);
     } else if (soundType === "fourthKit") {
-      setSoundType("thirdKit");
-      setSounds(soundGroup.thirdKit);
-    } else if (soundType === "thirdKit")  {
+      setSoundType("offTheWallKit");
+      setSounds(soundGroup.offTheWallKit);
+    } else if (soundType === "offTheWallKit")  {
       setSoundType("tr909Kit");
       setSounds(soundGroup.tr909Kit)
     } else if (soundType === "tr909Kit") {
