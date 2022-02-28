@@ -4,98 +4,98 @@ const firstSoundsGroup = [
   {
     keyCode: 49,
     key: '1',
-    id: 'Heater-1',
-    url: '../sounds/TR909/tr_-_931.wav'
+    id: 'Ride',
+    url: '../drums/TR808/808ride.wav'
   },
   {
     keyCode: 50,
     key: '2',
-    id: 'Heater-2',
-    url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3'
+    id: 'Clave',
+    url: '../drums/TR808/808clave.wav'
   },
   {
     keyCode: 51,
     key: '3',
-    id: 'Heater-3',
-    url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3'
+    id: 'Rimshot',
+    url: '../drums/TR808/808rimshot.wav'
   },
   {
     keyCode: 52,
     key: '4',
-    id: 'Heater-97',
-    url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3'
+    id: 'Scratch',
+    url: '../drums/TR808/808scratch.wav'
   },
   {
     keyCode: 81,
     key: 'Q',
-    id: 'Heater-4',
-    url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3'
+    id: 'Low Tom',
+    url: '../drums/TR808/808lowtom.wav'
   },
   {
     keyCode: 87,
     key: 'W',
-    id: 'Clap',
-    url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3'
+    id: 'Mid Tom',
+    url: '../drums/TR808/808medtom.wav'
   },
   {
     keyCode: 69,
     key: 'E',
-    id: 'Open-HH',
-    url: 'https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3'
+    id: 'High Tom',
+    url: '../drums/TR808/808hightom.wav'
   },
   {
     keyCode: 82,
     key: 'R',
-    id: "Kick-n'-Hat",
-    url: 'https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3'
+    id: "Cowbell",
+    url: '../drums/TR808/808cowbell.wav'
   },
   {
     keyCode: 65,
     key: 'A',
-    id: 'Kick',
-    url: 'https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3'
+    id: 'Snare',
+    url: '../drums/TR808/808snare.wav'
   },
   {
     keyCode: 83,
     key: 'S',
-    id: 'Closed-HH',
-    url: 'https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3'
+    id: 'Clap',
+    url: '../drums/TR808/808clap.wav'
   },
   {
     keyCode: 68,
     key: 'D',
-    id: 'Closed-HH',
-    url: 'https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3'
+    id: 'Closed Hi-Hat',
+    url: '../drums/TR808/808closedhat.wav'
   },
   {
     keyCode: 70,
     key: 'F',
-    id: 'Closed-HH',
-    url: 'https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3'
+    id: 'Open Hi-Hat',
+    url: '../drums/TR808/808openhat.wav'
   },
   {
     keyCode: 90,
     key: 'Z',
-    id: 'Closed-HH',
-    url: 'https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3'
+    id: 'Kick 1',
+    url: '../drums/TR808/808kick1.wav'
   },
   {
     keyCode: 88,
     key: 'X',
-    id: 'Closed-HH',
-    url: 'https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3'
+    id: 'Kick 2',
+    url: '../drums/TR808/808kick2.wav'
   },
   {
     keyCode: 67,
     key: 'C',
-    id: 'Closed-HH',
-    url: 'https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3'
+    id: 'Kick 3',
+    url: '../drums/TR808/808kick3.wav'
   },
   {
     keyCode: 86,
     key: 'V',
-    id: 'Closed-HH',
-    url: 'https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3'
+    id: 'Shaker',
+    url: '../drums/TR808/808shaker.wav'
   }
 ];
 
@@ -199,12 +199,12 @@ const secondSoundsGroup = [
 ];
 
 const soundsName = {
-  heaterKit: "Heater Kit",
+  TR808Kit: "TR-808 Kit",
   smoothPianoKit: "Smooth Piano Kit"
 };
 
 const soundsGroup = {
-  heaterKit: firstSoundsGroup,
+  TR808Kit: firstSoundsGroup,
   smoothPianoKit: secondSoundsGroup
 };
 
@@ -293,7 +293,7 @@ const Dummies = () => (
 function App() {
   const [power, setPower] = useState(true)
   const [volume, setVolume] = useState(1);
-  const [soundType, setSoundType] = useState("heaterKit");
+  const [soundType, setSoundType] = useState("TR808Kit");
   const [sounds, setSounds] = useState(soundsGroup[soundType]);
   const [soundName, setSoundName] = useState("");
 
@@ -329,12 +329,12 @@ function App() {
 
   const switchBank = () => {
     setSoundName("");
-    if (soundType === "heaterKit") {
+    if (soundType === "TR808Kit") {
       setSoundType("smoothPianoKit");
       setSounds(soundsGroup.smoothPianoKit);
     } else {
-      setSoundType("heaterKit");
-      setSounds(soundsGroup.heaterKit);
+      setSoundType("TR808Kit");
+      setSounds(soundsGroup.TR808Kit);
     }
   };
 
