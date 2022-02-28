@@ -45,10 +45,10 @@ const Keyboard = ({ id, power, play, sounds }) => (
 
 );
 
-const Screen = ({ name, volume }) => (
+const Screen = ({ name, volume, power }) => (
   <div className='screen'>
-    <h2 id='sound-display'>{name}</h2>
-    <h2 id='volume-display'>Volume: {Math.round(volume * 100)}%</h2>
+    <h2 id='sound-display'>{power ? name : ""}</h2>
+    <h2 id='volume-display' style={power ? {color: "black"} : {color: "#7e9908"}}>Volume: {Math.round(volume * 100)}%</h2>
   </div>
 );
  
@@ -67,9 +67,11 @@ const Volume = ({ volume, handleVolumeChange }) => (
   </div>
 );
 
-const SwitchBank = ({ switchBank }) => (
+const SwitchBank = ({ switchBank, switchBankBack }) => (
   <div className='switch-bank'>
-    <button onClick={switchBank}>Switch Bank</button>
+    <i class="arrow right" className='switch-bank left' onClick={switchBankBack}></i>
+      <h4>Switch Bank</h4>
+    <button className='switch-bank right' onClick={switchBank}></button>
   </div>
 );
 
@@ -121,11 +123,10 @@ function App() {
 
   const deactivateAudio = (audio) => {
     setTimeout(() => {
-      audio.parentElement.style.backgroundColor = "#ffffff"
-      audio.parentElement.style.color = "#000000"
+      audio.parentElement.style.backgroundColor = "#464646"
+      audio.parentElement.style.color = "#ffffff"
     }, 300)
   };
- 
 
   const play = (key, sound) => {
     setSoundName(sound);
@@ -153,6 +154,23 @@ function App() {
     }
   };
 
+  const switchBankBack = () => {
+    setSoundName("");
+    if (soundType === "tr808Kit") {
+      setSoundType("fourthKit");
+      setSounds(soundGroup.fourthKit);
+    } else if (soundType === "fourthKit") {
+      setSoundType("thirdKit");
+      setSounds(soundGroup.thirdKit);
+    } else if (soundType === "thirdKit")  {
+      setSoundType("tr909Kit");
+      setSounds(soundGroup.tr909Kit)
+    } else if (soundType === "tr909Kit") {
+      setSoundType("tr808Kit")
+      setSounds(soundGroup.tr808Kit)
+    }
+  };
+
   const setKeyVolume = () => {
     const audios = sounds.map(sound => document.getElementById(sound.key));
     audios.forEach(audio => {
@@ -169,9 +187,9 @@ function App() {
         <Keyboard power={power} play={play} sounds={sounds} />
         <div className='right-side'>
           <Power stop={stop} power={power} />
-          <Screen stop={stop} volume={volume} name={soundName || soundsName[soundType]} switchBank={switchBank} />
-          <SwitchBank switchBank={switchBank} />
-          <Volume volume={volume} handleVolumeChange={handleVolumeChange} />
+          <Screen power={power} stop={stop} volume={volume} name={soundName || soundsName[soundType]} switchBank={switchBank} />
+          <SwitchBank switchBank={switchBank} switchBankBack={switchBankBack} />
+          <Volume power={power} volume={volume} handleVolumeChange={handleVolumeChange} />
           <Dummies />
         </div>
       </div>
