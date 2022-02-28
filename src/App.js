@@ -78,7 +78,7 @@ const SwitchBank = ({ switchBank, switchBankBack }) => (
 const Power = ({ stop, power }) => (
   <div className='power'>
     <button id="powerbutton" onClick={stop}>POWER</button>
-    <button id="on-off" style={power ? { backgroundColor: "#B3EA7B"} : {backgroundColor: "#B41717"}}></button>
+    <button id="on-off" style={power ? { backgroundColor: "#B3EA7B", backgroundImage: "linear-gradient(green,lightgreen)"} : {backgroundColor: "#B41717", backgroundImage: "linear-gradient(red,darkred)"}}></button>
   </div>
 );
 
