@@ -198,14 +198,216 @@ const secondSoundsGroup = [
   }
 ];
 
+const thirdSoundsGroup = [
+  {
+    keyCode: 81,
+    key: 'Q',
+    id: 'Chord-1 bro',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Chord_1.mp3'
+  },
+  {
+    keyCode: 87,
+    key: 'W',
+    id: 'Chord-2',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Chord_2.mp3'
+  },
+  {
+    keyCode: 69,
+    key: 'E',
+    id: 'Chord-3',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Chord_3.mp3'
+  },
+  {
+    keyCode: 65,
+    key: 'A',
+    id: 'Shaker',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Give_us_a_light.mp3'
+  },
+  {
+    keyCode: 83,
+    key: 'S',
+    id: 'Open-HH',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Dry_Ohh.mp3'
+  },
+  {
+    keyCode: 68,
+    key: 'D',
+    id: 'Closed-HH',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Bld_H1.mp3'
+  },
+  {
+    keyCode: 90,
+    key: 'Z',
+    id: 'Punchy-Kick',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/punchy_kick_1.mp3'
+  },
+  {
+    keyCode: 88,
+    key: 'X',
+    id: 'Side-Stick',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/side_stick_1.mp3'
+  },
+  {
+    keyCode: 67,
+    key: 'C',
+    id: 'Snare',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3'
+  },
+  {
+    keyCode: 67,
+    key: 'C',
+    id: 'Snare',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3'
+  },
+  {
+    keyCode: 67,
+    key: 'C',
+    id: 'Snare',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3'
+  },
+  {
+    keyCode: 67,
+    key: 'C',
+    id: 'Snare',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3'
+  },
+  {
+    keyCode: 67,
+    key: 'C',
+    id: 'Snare',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3'
+  },
+  {
+    keyCode: 67,
+    key: 'C',
+    id: 'Snare',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3'
+  },
+  {
+    keyCode: 67,
+    key: 'C',
+    id: 'Snare',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3'
+  },
+  {
+    keyCode: 67,
+    key: 'C',
+    id: 'Snare',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3'
+  }
+];
+
+const fourthSoundsGroup = [
+  {
+    keyCode: 81,
+    key: 'Q',
+    id: 'Chord-1 bro bro',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Chord_1.mp3'
+  },
+  {
+    keyCode: 87,
+    key: 'W',
+    id: 'Chord-2',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Chord_2.mp3'
+  },
+  {
+    keyCode: 69,
+    key: 'E',
+    id: 'Chord-3',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Chord_3.mp3'
+  },
+  {
+    keyCode: 65,
+    key: 'A',
+    id: 'Shaker',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Give_us_a_light.mp3'
+  },
+  {
+    keyCode: 83,
+    key: 'S',
+    id: 'Open-HH',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Dry_Ohh.mp3'
+  },
+  {
+    keyCode: 68,
+    key: 'D',
+    id: 'Closed-HH',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Bld_H1.mp3'
+  },
+  {
+    keyCode: 90,
+    key: 'Z',
+    id: 'Punchy-Kick',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/punchy_kick_1.mp3'
+  },
+  {
+    keyCode: 88,
+    key: 'X',
+    id: 'Side-Stick',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/side_stick_1.mp3'
+  },
+  {
+    keyCode: 67,
+    key: 'C',
+    id: 'Snare',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3'
+  },
+  {
+    keyCode: 67,
+    key: 'C',
+    id: 'Snare',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3'
+  },
+  {
+    keyCode: 67,
+    key: 'C',
+    id: 'Snare',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3'
+  },
+  {
+    keyCode: 67,
+    key: 'C',
+    id: 'Snare',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3'
+  },
+  {
+    keyCode: 67,
+    key: 'C',
+    id: 'Snare',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3'
+  },
+  {
+    keyCode: 67,
+    key: 'C',
+    id: 'Snare',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3'
+  },
+  {
+    keyCode: 67,
+    key: 'C',
+    id: 'Snare',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3'
+  },
+  {
+    keyCode: 67,
+    key: 'C',
+    id: 'Snare',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3'
+  }
+];
+
 const soundsName = {
-  TR808Kit: "TR-808 Kit",
-  smoothPianoKit: "Smooth Piano Kit"
+  tr808Kit: "TR-808 Kit",
+  smoothPianoKit: "Smooth Piano Kit",
+  thirdKit: "Third Kit",
+  fourthKit: "Fourth Kit"
 };
 
 const soundsGroup = {
-  TR808Kit: firstSoundsGroup,
-  smoothPianoKit: secondSoundsGroup
+  tr808Kit: firstSoundsGroup,
+  smoothPianoKit: secondSoundsGroup,
+  thirdKit: thirdSoundsGroup,
+  fourthKit: fourthSoundsGroup
 };
 
 const KeyboardKey = ({ play, sound: { id, key, url, keyCode } }) => {
@@ -229,7 +431,7 @@ const KeyboardKey = ({ play, sound: { id, key, url, keyCode } }) => {
 const Keyboard = ({ id, power, play, sounds }) => (
   <div className='keyboard-wrapper'>
     <div className='keyboard'>
-      {power ? sounds.map((sound) => <KeyboardKey play={play} sound={sound} />) : sounds.map((sound) => <KeyboardKey play={play} sound={{...sound, url: "#"}} />)}
+      {power ? sounds.map((sound) => <KeyboardKey key={id} play={play} sound={sound} />) : sounds.map((sound) => <KeyboardKey key={id} play={play} sound={{...sound, url: "#"}} />)}
     </div>
   </div>
 
@@ -252,7 +454,6 @@ const Volume = ({ volume, handleVolumeChange }) => (
       type="range"
       value={volume}
       onChange={handleVolumeChange}
-      orient="vertical"
       />
       <h4>Master Volume</h4>
   </div>
@@ -292,8 +493,8 @@ const Dummies = () => (
 
 function App() {
   const [power, setPower] = useState(true)
-  const [volume, setVolume] = useState(1);
-  const [soundType, setSoundType] = useState("TR808Kit");
+  const [volume, setVolume] = useState(0.8);
+  const [soundType, setSoundType] = useState("tr808Kit");
   const [sounds, setSounds] = useState(soundsGroup[soundType]);
   const [soundName, setSoundName] = useState("");
 
@@ -329,12 +530,18 @@ function App() {
 
   const switchBank = () => {
     setSoundName("");
-    if (soundType === "TR808Kit") {
+    if (soundType === "tr808Kit") {
       setSoundType("smoothPianoKit");
       setSounds(soundsGroup.smoothPianoKit);
-    } else {
-      setSoundType("TR808Kit");
-      setSounds(soundsGroup.TR808Kit);
+    } else if (soundType === "smoothPianoKit") {
+      setSoundType("thirdKit");
+      setSounds(soundsGroup.thirdKit);
+    } else if (soundType === "thirdKit")  {
+      setSoundType("fourthKit");
+      setSounds(soundsGroup.fourthKit)
+    } else if (soundType === "fourthKit") {
+      setSoundType("tr808Kit")
+      setSounds(soundsGroup.tr808Kit)
     }
   };
 
