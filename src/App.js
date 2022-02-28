@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { BsFillArrowRightSquareFill, BsFillArrowLeftSquareFill } from "react-icons/bs";
 import { firstSoundGroup } from './components/firstSoundGroup';
 import { secondSoundGroup } from './components/secondSoundGroup';
 import { thirdSoundGroup } from './components/thirdSoundGroup';
@@ -54,7 +55,6 @@ const Screen = ({ name, volume, power }) => (
  
 const Volume = ({ volume, handleVolumeChange }) => (
   <div className='volume'>
-    
      <input
       max="1"
       min="0"
@@ -69,9 +69,9 @@ const Volume = ({ volume, handleVolumeChange }) => (
 
 const SwitchBank = ({ switchBank, switchBankBack }) => (
   <div className='switch-bank'>
-    <i class="arrow right" className='switch-bank left' onClick={switchBankBack}></i>
+    <BsFillArrowLeftSquareFill className='switch-bank-button' onClick={switchBankBack} />
       <h4>Switch Bank</h4>
-    <button className='switch-bank right' onClick={switchBank}></button>
+    <BsFillArrowRightSquareFill className='switch-bank-button' onClick={switchBank} />
   </div>
 );
 

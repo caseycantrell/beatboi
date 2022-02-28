@@ -130,22 +130,20 @@ h2 {
 
 .switch-bank {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   text-align: center;
+  align-items: center;
   padding: 10px;
   padding-top: 30px;
+  font-size: 18px;
+  font-family: Poppins;
 }
 
-.switch-bank .right {
-  border: solid black;
-  border-width: 0 3px 3px 0;
-  padding: 3px;
-}
-
-.switch-bank .left {
-  border: solid black;
-  border-width: 0 3px 3px 0;
-  padding: 3px;
+.switch-bank-button {
+  color: black;
+  font-size: 26px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 
