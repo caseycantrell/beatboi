@@ -1,6 +1,6 @@
 # Welcome to Beatboi, a simple clone of one of my favorite classic drum machines, the AKAI MPC. 
 
-![Webflix](https://web-flix.netlify.app/static/media/webflix.b3a2269c88bdc931e9d9.png)
+![Beatboi](https://github.com/caseycantrell/mpc/blob/main/public/beatboi.jpg)
 
 Check out the deployed version [here](https://beatboi.netlify.app).
 
