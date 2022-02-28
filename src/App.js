@@ -267,18 +267,30 @@ const SwitchBank = ({ switchBank }) => (
 const Power = ({ stop, power }) => (
   <div className='power'>
     <button id="power" onClick={stop}>POWER</button>
-    <button id="on-off" style={power ? { backgroundColor: "green"} : {backgroundColor: "red"}}></button>
+    <button id="on-off" style={power ? { backgroundColor: "#B3EA7B"} : {backgroundColor: "#B41717"}}></button>
   </div>
 );
 
 const Dummies = () => (
-  <div className='dummy-buttons'>
+  <>
+  <div className='dummy-buttons1'>
+    <button id="dummy1"></button>
+    <button id="dummy1"></button>
+    <button id="dummy1"></button>  
+    <button id="dummy1"></button>
+    <button id="dummy1"></button>
+  </div>
+  <div className='dummy-buttons2'>
     <button id="dummy" style={{ backgroundColor: "red"}}></button>
     <button id="dummy" style={{ backgroundColor: "red"}}></button>
     <button id="dummy"></button>
     <button id="dummy"></button>
     <button id="dummy"></button>
   </div>
+  </>
+ 
+
+ 
   
 );
 

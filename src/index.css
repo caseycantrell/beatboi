@@ -107,7 +107,9 @@ h2 {
 .right-side {
   display: flex;
   flex-direction: column;
-  padding: 19px;
+  padding-bottom: 19px;
+  padding-left: 19px;
+  padding-right: 19px;
 }
 
 .power {
@@ -135,17 +137,31 @@ h2 {
   background-color: #000000;
 }
 
-.dummy-buttons {
+.dummy-buttons1 {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
   grid-gap: 2px;
-  padding-top: 50px;
+  padding-top: 30px;
+}
+
+.dummy-buttons2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+  grid-gap: 2px;
+  padding-top: 25px;
 }
 
 #dummy {
   width: 45px;
   height: 35px;
   background-color: #1f1f1f;
+  border-radius: 3px;
+}
+
+#dummy1 {
+  width: 45px;
+  height: 15px;
+  background-color: #e7e7e7;
   border-radius: 3px;
 }
 
