@@ -2,56 +2,86 @@ import React, { useEffect, useState } from 'react'
 
 const firstSoundsGroup = [
   {
-    keyCode: 81,
-    key: 'Q',
+    keyCode: 49,
+    key: '1',
     id: 'Heater-1',
-    url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3'
+    url: '../sounds/TR909/tr_-_931.wav'
   },
   {
-    keyCode: 87,
-    key: 'W',
+    keyCode: 50,
+    key: '2',
     id: 'Heater-2',
     url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3'
   },
   {
-    keyCode: 69,
-    key: 'E',
+    keyCode: 51,
+    key: '3',
     id: 'Heater-3',
     url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3'
   },
   {
-    keyCode: 65,
-    key: 'A',
+    keyCode: 52,
+    key: '4',
+    id: 'Heater-97',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3'
+  },
+  {
+    keyCode: 81,
+    key: 'Q',
     id: 'Heater-4',
     url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3'
   },
   {
-    keyCode: 83,
-    key: 'S',
+    keyCode: 87,
+    key: 'W',
     id: 'Clap',
     url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3'
   },
   {
-    keyCode: 68,
-    key: 'D',
+    keyCode: 69,
+    key: 'E',
     id: 'Open-HH',
     url: 'https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3'
   },
   {
-    keyCode: 90,
-    key: 'Z',
+    keyCode: 82,
+    key: 'R',
     id: "Kick-n'-Hat",
     url: 'https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3'
   },
   {
-    keyCode: 88,
-    key: 'X',
+    keyCode: 65,
+    key: 'A',
     id: 'Kick',
     url: 'https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3'
   },
   {
-    keyCode: 67,
-    key: 'C',
+    keyCode: 83,
+    key: 'S',
+    id: 'Closed-HH',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3'
+  },
+  {
+    keyCode: 68,
+    key: 'D',
+    id: 'Closed-HH',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3'
+  },
+  {
+    keyCode: 70,
+    key: 'F',
+    id: 'Closed-HH',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3'
+  },
+  {
+    keyCode: 90,
+    key: 'Z',
+    id: 'Closed-HH',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3'
+  },
+  {
+    keyCode: 88,
+    key: 'X',
     id: 'Closed-HH',
     url: 'https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3'
   },
@@ -62,38 +92,8 @@ const firstSoundsGroup = [
     url: 'https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3'
   },
   {
-    keyCode: 67,
-    key: 'C',
-    id: 'Closed-HH',
-    url: 'https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3'
-  },
-  {
-    keyCode: 67,
-    key: 'C',
-    id: 'Closed-HH',
-    url: 'https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3'
-  },
-  {
-    keyCode: 67,
-    key: 'C',
-    id: 'Closed-HH',
-    url: 'https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3'
-  },
-  {
-    keyCode: 67,
-    key: 'C',
-    id: 'Closed-HH',
-    url: 'https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3'
-  },
-  {
-    keyCode: 67,
-    key: 'C',
-    id: 'Closed-HH',
-    url: 'https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3'
-  },
-  {
-    keyCode: 67,
-    key: 'C',
+    keyCode: 86,
+    key: 'V',
     id: 'Closed-HH',
     url: 'https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3'
   }
