@@ -2,7 +2,7 @@
 
 ![Beatboi](https://github.com/caseycantrell/mpc/blob/main/public/beatboi.jpg)
 
-Check out the deployed version [here](https://beatboi.netlify.app).
+## Check out the deployed version [here](https://beatboi.netlify.app).
 
 ---
 
