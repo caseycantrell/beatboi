@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&family=VT323&display=swap');
+
 * {
     margin: 0;
 }
   
 body {
   font-size: 24px;
+  font-family: Roboto, sans-serif;
 }
 
 h2 {
@@ -67,13 +70,33 @@ h2 {
 }
 
 #volume-display {
-  font-family: Poppins, sans-serif;
-  font-size: 18px;
+  font-family: VT323, sans-serif;
+  font-size: 28px;
 }
 
 #sound-display {
-  font-family: Poppins, sans-serif;
-  font-size: 20px;
+  font-family: VT323, sans-serif;
+  font-size: 28px;
+}
+
+#power {
+  font-family: Roboto;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 14px;
+  margin-left: auto;
+  margin-right: -120px;
+  border: 2px solid black;
+  background-color: #1f1f1f;
+  color: white;
+}
+
+#on-off {
+  border: 3px solid black;
+  border-radius: 50px;
+  padding: 8px;
+  margin-left: auto;
+  padding-left: 8px;
 }
 
 .right-side {
@@ -84,17 +107,18 @@ h2 {
 
 .power {
   display: flex;
-  align-items: right;
   padding-bottom: 20px;
 }
 
 .volume {
-
+  text-align: center;
+  
 }
 
 .switch-bank {
   text-align: center;
   padding: 10px;
+  padding-top: 30px;
 }
 
 .switch-bank button {

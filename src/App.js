@@ -263,7 +263,8 @@ const SwitchBank = ({ switchBank }) => (
 
 const Power = ({ stop, power }) => (
   <div className='power'>
-    <button onClick={stop}>Power: {power ? "ON" : "OFF"}</button>
+    <button id="power" onClick={stop}>POWER</button>
+    <button id="on-off" style={power ? { backgroundColor: "green"} : {backgroundColor: "red"}}></button>
   </div>
 );
 
