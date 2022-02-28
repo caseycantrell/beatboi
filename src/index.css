@@ -23,7 +23,8 @@ h2 {
   
 .wrapper {
     display: flex;
-    padding:55px;
+    padding: 40px;
+    padding-right: 60px;
     border: 2px solid black;
     border-radius: 14px;
     background-color: #c8c7c1;
@@ -113,7 +114,7 @@ h2 {
   display: flex;
   flex-direction: column;
   padding-bottom: 19px;
-  padding-left: 26px;
+  padding-left: 30px;
   padding-right: 19px;
 }
 

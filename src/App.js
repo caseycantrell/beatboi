@@ -48,7 +48,7 @@ const Keyboard = ({ id, power, play, sounds }) => (
 
 const Screen = ({ name, volume, power }) => (
   <div className='screen'>
-    <h2 id='sound-display'>{power ? name : ""}</h2>
+    <h2 id='sound-display' style={power ? {color: "black"} : {color: "#7e9908"}}>{name}</h2>
     <h2 id='volume-display' style={power ? {color: "black"} : {color: "#7e9908"}}>Volume: {Math.round(volume * 100)}%</h2>
   </div>
 );
