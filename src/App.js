@@ -127,7 +127,7 @@ function App() {
     setTimeout(() => {
       audio.parentElement.style.backgroundColor = "#464646"
       audio.parentElement.style.color = "#ffffff"
-    }, 300)
+    }, 150)
   };
 
   const play = (key, sound) => {
