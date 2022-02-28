@@ -227,9 +227,12 @@ const KeyboardKey = ({ play, sound: { id, key, url, keyCode } }) => {
 };
 
 const Keyboard = ({ id, power, play, sounds }) => (
-  <div className='keyboard'>
-    {power ? sounds.map((sound) => <KeyboardKey play={play} sound={sound} />) : sounds.map((sound) => <KeyboardKey play={play} sound={{...sound, url: "#"}} />)}
+  <div className='keyboard-wrapper'>
+    <div className='keyboard'>
+      {power ? sounds.map((sound) => <KeyboardKey play={play} sound={sound} />) : sounds.map((sound) => <KeyboardKey play={play} sound={{...sound, url: "#"}} />)}
+    </div>
   </div>
+
 );
 
 const Screen = ({ name, volume }) => (
@@ -266,6 +269,17 @@ const Power = ({ stop, power }) => (
     <button id="power" onClick={stop}>POWER</button>
     <button id="on-off" style={power ? { backgroundColor: "green"} : {backgroundColor: "red"}}></button>
   </div>
+);
+
+const Dummies = () => (
+  <div className='dummy-buttons'>
+    <button id="dummy" style={{ backgroundColor: "red"}}></button>
+    <button id="dummy" style={{ backgroundColor: "red"}}></button>
+    <button id="dummy"></button>
+    <button id="dummy"></button>
+    <button id="dummy"></button>
+  </div>
+  
 );
 
 function App() {
@@ -335,6 +349,7 @@ function App() {
           <Screen stop={stop} volume={volume} name={soundName || soundsName[soundType]} switchBank={switchBank} />
           <SwitchBank switchBank={switchBank} />
           <Volume volume={volume} handleVolumeChange={handleVolumeChange} />
+          <Dummies />
         </div>
       </div>
     </div>

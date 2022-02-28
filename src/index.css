@@ -22,7 +22,7 @@ h2 {
   
 .wrapper {
     display: flex;
-    padding: 10px;
+    padding: 40px;
     border: 2px solid black;
     border-radius: 4px;
     background-color: #c2bea4;
@@ -32,6 +32,11 @@ h2 {
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(4, 1fr);
+}
+
+.keyboard-wrapper {
+  background-color: rgb(141, 141, 141);
+  padding: 10px;
 }
 
 .keyboard .drum-pad {
@@ -102,7 +107,7 @@ h2 {
 .right-side {
   display: flex;
   flex-direction: column;
-  padding: 17px;
+  padding: 19px;
 }
 
 .power {
@@ -128,6 +133,20 @@ h2 {
   font-size: 18px;
   color: white;
   background-color: #000000;
+}
+
+.dummy-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 2px;
+  padding-top: 50px;
+}
+
+#dummy {
+  width: 45px;
+  height: 35px;
+  background-color: #1f1f1f;
+  border-radius: 3px;
 }
 
 input[type=range] {
