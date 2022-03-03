@@ -150,7 +150,7 @@ function App() {
     } else if (soundType === "offTheWallKit")  {
       setSoundType("buckKit");
       setSounds(soundGroup.buckKit)
-    } else if (soundType === "buckKit") {
+    } else {
       setSoundType("tr808Kit")
       setSounds(soundGroup.tr808Kit)
     }
@@ -167,7 +167,7 @@ function App() {
     } else if (soundType === "offTheWallKit")  {
       setSoundType("tr909Kit");
       setSounds(soundGroup.tr909Kit)
-    } else if (soundType === "tr909Kit") {
+    } else {
       setSoundType("tr808Kit")
       setSounds(soundGroup.tr808Kit)
     }
