@@ -1,16 +1,16 @@
-# Welcome to Beatboi, a simple clone of one of my favorite classic drum machines, the AKAI MPC. 
+# Welcome to beatboi, a simple clone of one of my favorite classic drum machines, the AKAI MPC. 
 
-![Beatboi](https://github.com/caseycantrell/mpc/blob/main/public/beatboi.jpg)
+![beatboi](https://github.com/caseycantrell/mpc/blob/main/public/beatboi.jpg)
 
 ## Check out the deployed version [here](https://beatboi.netlify.app).
 
 ---
 
-If you'd like to clone this repo and run this application locally, you sure as heck can. Just run
+If you'd like to clone this repo and run this application locally, you just go right ahead. First run
 
 ### `git clone https://github.com/caseycantrell/mpc`
 
-and inside that directory run
+and from within that directory run
 
 ### `npm install`
 
