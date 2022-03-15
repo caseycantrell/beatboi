@@ -1,4 +1,4 @@
-# Welcome to beatboi, a simple clone of one of my favorite classic drum machines, the AKAI MPC. 
+## Beatboi is a simple clone of one of my favorite drum machines, built in React.
 
 ![beatboi](https://github.com/caseycantrell/mpc/blob/main/public/beatboi.jpg)
 
